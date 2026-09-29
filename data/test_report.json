@@ -1,0 +1,47 @@
+{
+  "uptime_seconds": 0.0,
+  "total_frames_processed": 0,
+  "average_fps": 0.0,
+  "average_latency_ms": 0.0,
+  "total_recognitions": 5,
+  "correct_recognitions": 5,
+  "false_triggers": 0,
+  "overall_accuracy_percent": 100.0,
+  "gestures": {
+    "INDEX_POINTING": {
+      "attempts": 1,
+      "correct": 1,
+      "false_triggers": 0,
+      "accuracy_percent": 100.0,
+      "avg_latency_ms": 18.5
+    },
+    "PINCH_INDEX": {
+      "attempts": 1,
+      "correct": 1,
+      "false_triggers": 0,
+      "accuracy_percent": 100.0,
+      "avg_latency_ms": 22.1
+    },
+    "OK_SIGN": {
+      "attempts": 1,
+      "correct": 1,
+      "false_triggers": 0,
+      "accuracy_percent": 100.0,
+      "avg_latency_ms": 21.0
+    },
+    "CLOSED_FIST": {
+      "attempts": 1,
+      "correct": 1,
+      "false_triggers": 0,
+      "accuracy_percent": 100.0,
+      "avg_latency_ms": 19.4
+    },
+    "TWO_FINGERS_UP": {
+      "attempts": 1,
+      "correct": 1,
+      "false_triggers": 0,
+      "accuracy_percent": 100.0,
+      "avg_latency_ms": 21.0
+    }
+  }
+}

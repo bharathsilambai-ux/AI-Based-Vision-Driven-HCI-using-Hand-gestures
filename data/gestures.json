@@ -1,0 +1,134 @@
+{
+  "system_version": "2.0",
+  "active_profile": "default",
+  "profiles": {
+    "default": {
+      "name": "Default 48-Operation HCI Profile",
+      "modes": {
+        "Mouse Mode": {
+          "INDEX_POINTING": "MOVE_CURSOR",
+          "PINCH_INDEX": "LEFT_CLICK",
+          "DOUBLE_PINCH_INDEX": "DOUBLE_CLICK",
+          "PINCH_MIDDLE": "RIGHT_CLICK",
+          "CLOSED_FIST": "START_DRAG",
+          "OPEN_PALM": "RELEASE_DRAG",
+          "INDEX_HOLD": "HOVER",
+          "TWO_FINGERS_UP": "SCROLL_UP",
+          "TWO_FINGERS_DOWN": "SCROLL_DOWN",
+          "THUMBS_UP": "VOLUME_UP",
+          "THUMBS_DOWN": "VOLUME_DOWN",
+          "OK_SIGN": "TAKE_SCREENSHOT"
+        },
+        "Navigation Mode": {
+          "TWO_FINGERS_UP": "SCROLL_UP",
+          "TWO_FINGERS_DOWN": "SCROLL_DOWN",
+          "SWIPE_UP": "PAGE_UP",
+          "SWIPE_DOWN": "PAGE_DOWN",
+          "SWIPE_LEFT": "BROWSER_BACK",
+          "SWIPE_RIGHT": "BROWSER_FORWARD",
+          "THUMBS_UP": "SHOW_DESKTOP",
+          "OPEN_PALM": "HALT_SCROLL",
+          "INDEX_POINTING": "MOVE_CURSOR",
+          "PINCH_INDEX": "LEFT_CLICK",
+          "PINCH_MIDDLE": "RIGHT_CLICK",
+          "OK_SIGN": "TAKE_SCREENSHOT"
+        },
+        "Media Mode": {
+          "THUMBS_UP": "MEDIA_PLAY_PAUSE",
+          "PEACE_SIGN": "MEDIA_PLAY_PAUSE",
+          "SWIPE_RIGHT": "MEDIA_NEXT_TRACK",
+          "SWIPE_LEFT": "MEDIA_PREV_TRACK",
+          "HAND_MOVE_UP": "VOLUME_UP",
+          "HAND_MOVE_DOWN": "VOLUME_DOWN",
+          "THUMB_PINKY": "VOLUME_MUTE",
+          "CLOSED_FIST": "VOLUME_MUTE",
+          "INDEX_POINTING": "MOVE_CURSOR",
+          "PINCH_INDEX": "LEFT_CLICK",
+          "OK_SIGN": "TAKE_SCREENSHOT"
+        },
+        "System Mode": {
+          "OK_SIGN": "TAKE_SCREENSHOT",
+          "THREE_FINGERS": "APP_SWITCH",
+          "FOUR_FINGERS": "TASK_VIEW",
+          "CLOSED_FIST": "WINDOW_MINIMIZE",
+          "OPEN_PALM": "WINDOW_MAXIMIZE",
+          "FIVE_FINGERS_HOLD": "WINDOW_CLOSE_SAFE",
+          "ROCK_SIGN_HOLD": "LOCK_SCREEN_SAFE",
+          "ROCK_SIGN": "LOCK_SCREEN_SAFE",
+          "TWO_HAND_PALMS": "SHOW_DESKTOP",
+          "THUMBS_UP": "SHOW_DESKTOP",
+          "INDEX_POINTING": "MOVE_CURSOR",
+          "PINCH_INDEX": "LEFT_CLICK"
+        },
+        "Keyboard Mode": {
+          "PEACE_SIGN": "COPY",
+          "OPEN_PALM": "PASTE",
+          "PINCH_MIDDLE": "CUT",
+          "FINGER_GUN": "SELECT_ALL",
+          "SWIPE_LEFT": "UNDO",
+          "SWIPE_RIGHT": "REDO",
+          "TWO_FINGERS_DOWN": "KEY_ENTER",
+          "CLOSED_FIST": "KEY_ESCAPE",
+          "INDEX_POINTING": "MOVE_CURSOR",
+          "PINCH_INDEX": "LEFT_CLICK"
+        },
+        "Zoom Mode": {
+          "TWO_HAND_EXPAND": "ZOOM_IN",
+          "TWO_HAND_CONTRACT": "ZOOM_OUT",
+          "TWO_HAND_ROTATE": "ROTATE_DOCUMENT",
+          "SWIPE_UP": "ZOOM_IN",
+          "SWIPE_DOWN": "ZOOM_OUT",
+          "HAND_MOVE_UP": "BRIGHTNESS_INCREASE",
+          "HAND_MOVE_DOWN": "BRIGHTNESS_DECREASE",
+          "INDEX_POINTING": "MOVE_CURSOR",
+          "PINCH_INDEX": "LEFT_CLICK",
+          "OK_SIGN": "TAKE_SCREENSHOT"
+        },
+        "Two-Hand Mode": {
+          "TWO_HAND_EXPAND": "ZOOM_IN",
+          "TWO_HAND_CONTRACT": "ZOOM_OUT",
+          "TWO_HAND_ROTATE": "ROTATE_DOCUMENT",
+          "TWO_HAND_PALMS": "SHOW_DESKTOP",
+          "INDEX_POINTING": "MOVE_CURSOR",
+          "PINCH_INDEX": "LEFT_CLICK"
+        },
+        "Custom Gesture Mode": {
+          "INDEX_POINTING": "MOVE_CURSOR",
+          "PINCH_INDEX": "LEFT_CLICK",
+          "PINCH_MIDDLE": "RIGHT_CLICK",
+          "OK_SIGN": "TAKE_SCREENSHOT"
+        },
+        "Universal (All-in-One)": {
+          "INDEX_POINTING": "MOVE_CURSOR",
+          "PINCH_INDEX": "LEFT_CLICK",
+          "DOUBLE_PINCH_INDEX": "DOUBLE_CLICK",
+          "PINCH_MIDDLE": "RIGHT_CLICK",
+          "CLOSED_FIST": "START_DRAG",
+          "OPEN_PALM": "RELEASE_DRAG",
+          "TWO_FINGERS_UP": "SCROLL_UP",
+          "TWO_FINGERS_DOWN": "SCROLL_DOWN",
+          "SWIPE_UP": "PAGE_UP",
+          "SWIPE_DOWN": "PAGE_DOWN",
+          "SWIPE_LEFT": "BROWSER_BACK",
+          "SWIPE_RIGHT": "BROWSER_FORWARD",
+          "THUMBS_UP": "VOLUME_UP",
+          "THUMBS_DOWN": "VOLUME_DOWN",
+          "THUMB_PINKY": "VOLUME_MUTE",
+          "OK_SIGN": "TAKE_SCREENSHOT",
+          "PEACE_SIGN": "COPY",
+          "FINGER_GUN": "SELECT_ALL",
+          "THREE_FINGERS": "APP_SWITCH",
+          "FOUR_FINGERS": "TASK_VIEW",
+          "ROCK_SIGN": "LOCK_SCREEN_SAFE",
+          "ROCK_SIGN_HOLD": "LOCK_SCREEN_SAFE",
+          "FIVE_FINGERS_HOLD": "WINDOW_CLOSE_SAFE",
+          "TWO_HAND_EXPAND": "ZOOM_IN",
+          "TWO_HAND_CONTRACT": "ZOOM_OUT",
+          "TWO_HAND_ROTATE": "ROTATE_DOCUMENT",
+          "TWO_HAND_PALMS": "SHOW_DESKTOP"
+        }
+      },
+      "custom_gestures": {}
+    }
+  }
+}

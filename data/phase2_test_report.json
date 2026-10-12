@@ -1,0 +1,152 @@
+{
+  "phase": "Phase 2 - Camera & OpenCV Frame Acquisition",
+  "timestamp": "2026-10-03 11:46:31",
+  "tests_run": 21,
+  "tests_passed": 21,
+  "tests_failed": 0,
+  "tests_warned": 0,
+  "benchmarks": {
+    "available_cameras": [
+      {
+        "index": 0,
+        "backend": "CAP_DSHOW",
+        "width": 640,
+        "height": 480,
+        "fps": 30.0
+      }
+    ],
+    "decoupled_avg_latency_ms": 0.15,
+    "decoupled_p95_latency_ms": 0.29,
+    "hardware_sensor_fps": 11.2,
+    "rolling_fps": 9.5,
+    "lighting_condition": "NORMAL"
+  },
+  "details": [
+    {
+      "test": "Camera Device Discovery",
+      "status": "PASSED",
+      "message": "Found 1 device(s): Index 0 (640x480 @ 30.0fps, CAP_DSHOW)",
+      "latency_ms": 1279.87
+    },
+    {
+      "test": "Initial Status DISCONNECTED",
+      "status": "PASSED",
+      "message": "Current: DISCONNECTED",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Transition to STREAMING",
+      "status": "PASSED",
+      "message": "Status: STREAMING, Device Index: 0",
+      "latency_ms": 1656.42
+    },
+    {
+      "test": "Initial Frame Ingestion",
+      "status": "PASSED",
+      "message": "Frame received: shape=(480, 640, 3)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Transition to DISCONNECTED",
+      "status": "PASSED",
+      "message": "Status: DISCONNECTED, Hardware released",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Decoupled Ingestion Latency",
+      "status": "PASSED",
+      "message": "Mean: 0.15 ms | P95: 0.29 ms (target <= 5.0ms)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Hardware Sensor Frame Acquisition",
+      "status": "PASSED",
+      "message": "Captured 12/12 frames (11.2 FPS, mean interval: 89.2ms)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Frame Dimensional Integrity",
+      "status": "PASSED",
+      "message": "Resolution: 640x480 px, Telemetry Verified",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "EXTREME_DARK Classification",
+      "status": "PASSED",
+      "message": "Luminance: 15.0 -> EXTREME_DARK",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "LOW_LIGHT Classification",
+      "status": "PASSED",
+      "message": "Luminance: 45.0 -> LOW_LIGHT",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "NORMAL Lighting Classification",
+      "status": "PASSED",
+      "message": "Luminance: 120.0 -> NORMAL",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "BRIGHT Lighting Classification",
+      "status": "PASSED",
+      "message": "Luminance: 220.0 -> BRIGHT",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "CLAHE Trigger on Low-Light",
+      "status": "PASSED",
+      "message": "Enhanced: True",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Dynamic Range / Contrast Expansion",
+      "status": "PASSED",
+      "message": "StdDev: 11.55 -> 11.66 (+0.12)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Enhanced Frame Shape & Dtype",
+      "status": "PASSED",
+      "message": "Shape: (480, 640, 3), Dtype: uint8",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Laplacian Sharpness Discriminator",
+      "status": "PASSED",
+      "message": "Sharp: 38091.8 | Blurred: 4.3 (Ratio: 8826.8x)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Coordinate Inversion (Flip X)",
+      "status": "PASSED",
+      "message": "Left mean: 4.0, Right mean: 255.0",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "camera.ThreadedCamera Alias",
+      "status": "PASSED",
+      "message": "Matches CameraManager class",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "vision.ThreadedCamera Bridge",
+      "status": "PASSED",
+      "message": "Matches CameraManager class",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Context Manager (with CameraManager)",
+      "status": "PASSED",
+      "message": "Status inside context: STREAMING",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Context Manager Auto-Release",
+      "status": "PASSED",
+      "message": "Status after context: DISCONNECTED",
+      "latency_ms": 0.0
+    }
+  ]
+}

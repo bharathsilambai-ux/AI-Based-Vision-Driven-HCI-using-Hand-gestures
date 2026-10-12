@@ -1,0 +1,62 @@
+{
+  "dataset_version": "2.0",
+  "timestamp": "2026-10-03 12:07:39",
+  "total_samples": 1400,
+  "feature_dimension": 92,
+  "classes_count": 14,
+  "classes": [
+    "OPEN_PALM",
+    "FIST",
+    "THUMBS_UP",
+    "THUMBS_DOWN",
+    "POINT",
+    "PEACE",
+    "OK",
+    "PINCH",
+    "THREE_FINGERS",
+    "FOUR_FINGERS",
+    "SWIPE_LEFT",
+    "SWIPE_RIGHT",
+    "SWIPE_UP",
+    "SWIPE_DOWN"
+  ],
+  "distribution": {
+    "OPEN_PALM": 100,
+    "FIST": 100,
+    "THUMBS_UP": 100,
+    "THUMBS_DOWN": 100,
+    "POINT": 100,
+    "PEACE": 100,
+    "OK": 100,
+    "PINCH": 100,
+    "THREE_FINGERS": 100,
+    "FOUR_FINGERS": 100,
+    "SWIPE_LEFT": 100,
+    "SWIPE_RIGHT": 100,
+    "SWIPE_UP": 100,
+    "SWIPE_DOWN": 100
+  },
+  "validation": {
+    "valid": true,
+    "total_samples": 1400,
+    "feature_dim": 92,
+    "num_classes": 14,
+    "distribution": {
+      "OPEN_PALM": 100,
+      "FIST": 100,
+      "THUMBS_UP": 100,
+      "THUMBS_DOWN": 100,
+      "POINT": 100,
+      "PEACE": 100,
+      "OK": 100,
+      "PINCH": 100,
+      "THREE_FINGERS": 100,
+      "FOUR_FINGERS": 100,
+      "SWIPE_LEFT": 100,
+      "SWIPE_RIGHT": 100,
+      "SWIPE_UP": 100,
+      "SWIPE_DOWN": 100
+    },
+    "issues": []
+  }
+}

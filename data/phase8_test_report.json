@@ -1,0 +1,92 @@
+{
+  "phase": "Phase 8 - Confidence Filtering, Temporal Stabilization & Command Cooldown",
+  "timestamp": "2026-10-03 15:33:33",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "total_tests": 13,
+  "passed": 13,
+  "failed": 0,
+  "pass_rate_pct": 100.0,
+  "optimal_confidence_threshold": 0.75,
+  "mean_pipeline_latency_ms": 1.6818643999285996,
+  "pipeline_throughput_fps": 594.5782549666033,
+  "results": [
+    {
+      "test": "Empirical Confidence Sweep Completed",
+      "status": "PASS",
+      "details": "Evaluated 9 thresholds (0.50-0.95)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Empirically Tuned Threshold Selection",
+      "status": "PASS",
+      "details": "Selected Optimal: 0.75 (Activation: 75.71%)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Confidence Tuning JSON Report Exported",
+      "status": "PASS",
+      "details": "Saved to C:\\Users\\venga\\OneDrive\\Documents\\project\\data\\confidence_tuning_report.json",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Temporal Window Size Benchmark (W=3, 5, 7)",
+      "status": "PASS",
+      "details": "Frames to lock: {3: 2, 5: 3, 7: 4}",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Single-Frame Impulse Noise Rejection",
+      "status": "PASS",
+      "details": "Spike raw: 'SWIPE_DOWN', Confirmed retained: 'PEACE'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Double-Frame Outlier Suppression",
+      "status": "PASS",
+      "details": "2nd spike raw: 'FIST', Confirmed: 'PEACE'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Graceful Gesture Transition (Peace -> Fist)",
+      "status": "PASS",
+      "details": "Transitioned to: 'FIST' after 4 consecutive frames",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Volume Up Cooldown (200ms Target)",
+      "status": "PASS",
+      "details": "Initial fire: True, Rapid block (+50ms): True, Cooldown release (+250ms): True",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Sensitive Action Cooldown (Screenshot 1.2s)",
+      "status": "PASS",
+      "details": "Initial fire: True, Blocked at 0.5s: True, Allowed at 1.3s: True",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Continuous Action Exemption (Cursor Move)",
+      "status": "PASS",
+      "details": "Continuous execution across 5 consecutive frames (10ms): [True, True, True, True, True]",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Sudden Hand Loss Safety State",
+      "status": "PASS",
+      "details": "Status: 'NO HAND DETECTED'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Hand Tracking Regain Resilience",
+      "status": "PASS",
+      "details": "Regained gesture: 'PEACE'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Continuous Pipeline Latency (< 3.0 ms)",
+      "status": "PASS",
+      "details": "Mean: 1.682 ms | Throughput: 595 FPS",
+      "latency_ms": 0.0
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "phase": 18,
+  "name": "Full Benchmark Evaluation & Paper Comparison",
+  "timestamp": "2026-10-03 16:12:25",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "summary": {
+    "total_tests": 11,
+    "passed": 11,
+    "failed": 0,
+    "pass_rate_pct": 100.0,
+    "static_accuracy_pct": 97.14,
+    "static_macro_f1_pct": 97.12,
+    "dynamic_accuracy_pct": 100.0,
+    "core_pipeline_latency_ms": 0.8465,
+    "total_e2e_latency_ms": 2.5173,
+    "theoretical_max_fps": 397.3
+  },
+  "results": [
+    {
+      "test": "BenchmarkEvaluator Package Export",
+      "status": "PASS",
+      "details": "BenchmarkEvaluator exported from evaluation package",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Benchmark Evaluator Initialization",
+      "status": "PASS",
+      "details": "Model: SVM_RBF | Dataset: C:\\Users\\venga\\OneDrive\\Documents\\project\\dataset\\gesture_dataset.npz",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Static Classification Accuracy (>= 90%)",
+      "status": "PASS",
+      "details": "Accuracy: 97.14% (Test Samples: 350)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Static Classification Macro F1 (>= 90%)",
+      "status": "PASS",
+      "details": "Macro F1: 97.12% | Precision: 97.26%",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Per-Class Gesture Evaluation",
+      "status": "PASS",
+      "details": "Evaluated 14 classes: FIST, FOUR_FINGERS, OK, OPEN_PALM, PEACE, PINCH, POINT, SWIPE_DOWN, SWIPE_LEFT, SWIPE_RIGHT, SWIPE_UP, THREE_FINGERS, THUMBS_DOWN, THUMBS_UP",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Confusion Matrix Integrity",
+      "status": "PASS",
+      "details": "Matrix size: 14x14 | Diagonal Sum (Correct): 340/350",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Dynamic Gesture Recognition Accuracy (>= 90%)",
+      "status": "PASS",
+      "details": "Accuracy: 100.00% across SWIPE_LEFT, SWIPE_RIGHT, SWIPE_UP, SWIPE_DOWN",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Core Pipeline Latency (< 10 ms)",
+      "status": "PASS",
+      "details": "Core: 0.847 ms (Feature Ext: 0.597 ms | Inference: 0.249 ms)",
+      "latency_ms": 0.847
+    },
+    {
+      "test": "End-to-End Processing Throughput (> 100 FPS)",
+      "status": "PASS",
+      "details": "Total E2E: 2.517 ms | Theoretical Max: 397 FPS",
+      "latency_ms": 2.517
+    },
+    {
+      "test": "Research Paper Comparison Matrix",
+      "status": "PASS",
+      "details": "Evaluated 10 distinct performance dimensions vs baseline paper",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Evaluation Report JSON Generation",
+      "status": "PASS",
+      "details": "Saved report to: C:\\Users\\venga\\OneDrive\\Documents\\project\\data\\phase18_evaluation_report.json (8,978 bytes)",
+      "latency_ms": 0.0
+    }
+  ]
+}

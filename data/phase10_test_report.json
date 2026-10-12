@@ -1,0 +1,145 @@
+{
+  "phase": "Phase 10 - System Hardware & OS Controls",
+  "timestamp": "2026-10-03 15:44:58",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "total_tests": 22,
+  "passed": 22,
+  "failed": 0,
+  "pass_rate_pct": 100.0,
+  "mean_dispatch_latency_ms": 0.0012379999971017241,
+  "dispatch_throughput_ops": 807754.4445404647,
+  "results": [
+    {
+      "test": "SystemController Package Export",
+      "status": "PASS",
+      "details": "controllers.SystemController accessible",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "SystemController Mock Mode Init",
+      "status": "PASS",
+      "details": "Initialized in safe simulation mode",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Volume Increase (Step: +10%)",
+      "status": "PASS",
+      "details": "Old: 50% -> New: 60%",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Volume Decrease (Step: -15%)",
+      "status": "PASS",
+      "details": "Old: 60% -> New: 45%",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Volume Boundary Clamping ([0.0, 1.0])",
+      "status": "PASS",
+      "details": "Max clamped to: 1.0, Min clamped to: 0.0",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Mute / Unmute State Toggle",
+      "status": "PASS",
+      "details": "Toggled to Muted: True, back to Unmuted: True",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Brightness Increase (Step: +10%)",
+      "status": "PASS",
+      "details": "Old: 70% -> New: 80%",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Brightness Decrease (Step: -20%)",
+      "status": "PASS",
+      "details": "Old: 80% -> New: 60%",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Brightness Boundary Clamping ([0, 100])",
+      "status": "PASS",
+      "details": "Max clamped to: 100%, Min clamped to: 0%",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Screenshot Capture & Disk Serialization",
+      "status": "PASS",
+      "details": "Saved file: C:\\Users\\venga\\AppData\\Local\\Temp\\tmp3ja0zkts\\screenshot_20261003_154458.png",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Open File Explorer Action",
+      "status": "PASS",
+      "details": "Action: 'OPEN_FILE_EXPLORER'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Open Browser Action",
+      "status": "PASS",
+      "details": "Action: 'OPEN_BROWSER'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Minimize All Windows Action",
+      "status": "PASS",
+      "details": "Action: 'MINIMIZE_ALL'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Task View Overview Action",
+      "status": "PASS",
+      "details": "Action: 'TASK_VIEW'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Close Active Window Action",
+      "status": "PASS",
+      "details": "Action: 'CLOSE_WINDOW'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Cancel / Abort Operation Action",
+      "status": "PASS",
+      "details": "Action: 'CANCEL'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Application Launcher Action",
+      "status": "PASS",
+      "details": "Action: 'LAUNCH_NOTEPAD'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Lock Screen Safety Confirmation Gate",
+      "status": "PASS",
+      "details": "Unconfirmed lock screen safely suppressed",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Confirmed Lock Screen Execution",
+      "status": "PASS",
+      "details": "Action: 'LOCK_SCREEN'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Unified Action Router Execution",
+      "status": "PASS",
+      "details": "Successfully routed 13 commands",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "E2E Gesture Recognition -> System Execution",
+      "status": "PASS",
+      "details": "Gesture: 'THUMBS_UP' -> Action: 'VOLUME_UP' (Executed: True)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "System Dispatch Latency (< 0.05 ms)",
+      "status": "PASS",
+      "details": "Mean: 1.2 microseconds (0.0012 ms) | 807,754 actions/sec",
+      "latency_ms": 0.0
+    }
+  ]
+}

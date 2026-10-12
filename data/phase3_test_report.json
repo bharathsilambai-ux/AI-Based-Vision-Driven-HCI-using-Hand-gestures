@@ -1,0 +1,165 @@
+{
+  "phase": "Phase 3 - MediaPipe Hand Detection & Landmark Extraction",
+  "timestamp": "2026-10-03 11:46:43",
+  "tests_run": 25,
+  "tests_passed": 25,
+  "tests_failed": 0,
+  "tests_warned": 0,
+  "benchmarks": {
+    "inference_mean_ms": 14.24,
+    "inference_p95_ms": 15.13,
+    "inference_min_ms": 13.23
+  },
+  "details": [
+    {
+      "test": "Detector Backend Initialization",
+      "status": "PASSED",
+      "message": "Active backend: 'tasks' (max_hands=2)",
+      "latency_ms": 69.1
+    },
+    {
+      "test": "Zero Hands Ingestion (Blank)",
+      "status": "PASSED",
+      "message": "Hands detected: 0 (No crash)",
+      "latency_ms": 20.44
+    },
+    {
+      "test": "Noise Frame Immunity",
+      "status": "PASSED",
+      "message": "Hands detected: 0 on high-entropy noise",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "21 Landmark Extraction",
+      "status": "PASSED",
+      "message": "Extracted 21 3D coordinate tuples",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Normalized-to-Pixel Projection",
+      "status": "PASSED",
+      "message": "L0 Wrist: norm=(0.50, 0.75) -> px=(320, 360)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Padded Bounding Box Geometry",
+      "status": "PASSED",
+      "message": "Box: [159, 100, 410, 380] (251x280 px)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Palm Centroid & Scale Span",
+      "status": "PASSED",
+      "message": "Center: (315, 222) | Palm Span: 0.250",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "63-Dim Flat Feature Vector",
+      "status": "PASSED",
+      "message": "Shape: (63,), Dtype: float32",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Upright Orientation (0 deg)",
+      "status": "PASSED",
+      "message": "Measured: 0.0 deg (expected ~0 deg)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Clockwise Tilt (+45 deg)",
+      "status": "PASSED",
+      "message": "Measured: 45.0 deg (expected ~45 deg)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Counter-Clockwise Tilt (-45 deg)",
+      "status": "PASSED",
+      "message": "Measured: -45.0 deg (expected ~-45 deg)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Horizontal Orientation (+90 deg)",
+      "status": "PASSED",
+      "message": "Measured: 90.0 deg (expected ~90 deg)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Open Palm (5 Fingers Extended)",
+      "status": "PASSED",
+      "message": "States: [1, 1, 1, 1, 1]",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Closed Fist (0 Fingers Extended)",
+      "status": "PASSED",
+      "message": "States: [0, 0, 0, 0, 0]",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Point Gesture (Index Only)",
+      "status": "PASSED",
+      "message": "States: [0, 1, 0, 0, 0]",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Peace Gesture (Index + Middle)",
+      "status": "PASSED",
+      "message": "States: [0, 1, 1, 0, 0]",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Thumbs Up (Thumb Only)",
+      "status": "PASSED",
+      "message": "States: [1, 0, 0, 0, 0]",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Rotated Palm Invariance (45 deg)",
+      "status": "PASSED",
+      "message": "States: [1, 1, 1, 1, 1] at 45.0 deg",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Skeleton Drawing Execution",
+      "status": "PASSED",
+      "message": "Rendered 25978 non-zero annotated pixels",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Fingertip Highlight Node",
+      "status": "PASSED",
+      "message": "Index tip pixel: BGR [255, 220, 0]",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Forward Inference Latency",
+      "status": "PASSED",
+      "message": "Mean: 14.24 ms | P95: 15.13 ms | Min: 13.23 ms (target < 40ms)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "vision.hand_tracker.HandTracker Bridge",
+      "status": "PASSED",
+      "message": "Instantiated successfully",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "root hand_detector Single-Hand Return",
+      "status": "PASSED",
+      "message": "Correctly returns None on empty frame",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Context Manager (with HandDetector)",
+      "status": "PASSED",
+      "message": "Active inside with-block",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Context Manager Auto-Close",
+      "status": "PASSED",
+      "message": "Resources released on exit",
+      "latency_ms": 0.0
+    }
+  ]
+}

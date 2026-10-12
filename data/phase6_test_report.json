@@ -1,0 +1,134 @@
+{
+  "phase": "Phase 6 - Train and Evaluate Machine Learning Classifiers",
+  "timestamp": "2026-10-03 12:11:48",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "total_tests": 20,
+  "passed": 20,
+  "failed": 0,
+  "pass_rate_pct": 100.0,
+  "selected_model": "SVM_RBF",
+  "best_f1_macro": 0.9464,
+  "mean_inference_latency_ms": 0.5310675000073388,
+  "results": [
+    {
+      "test": "Models Package Exports",
+      "status": "PASS",
+      "details": "ModelTrainer, GesturePredictor accessible",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Default Paths & Dataset Existence",
+      "status": "PASS",
+      "details": "Dataset: C:\\Users\\venga\\OneDrive\\Documents\\project\\dataset\\gesture_dataset.npz",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "3 Model Architectures Evaluated",
+      "status": "PASS",
+      "details": "Trained: ['Random_Forest', 'SVM_RBF', 'MLP_Neural_Network'] (45.22s)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Metrics Completeness (Random_Forest)",
+      "status": "PASS",
+      "details": "Acc: 91.1% | F1: 91.0% | Latency: 42.22 ms",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Metrics Completeness (SVM_RBF)",
+      "status": "PASS",
+      "details": "Acc: 94.6% | F1: 94.6% | Latency: 0.32 ms",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Metrics Completeness (MLP_Neural_Network)",
+      "status": "PASS",
+      "details": "Acc: 91.8% | F1: 91.7% | Latency: 0.34 ms",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Empirical Model Selection",
+      "status": "PASS",
+      "details": "Winner: 'SVM_RBF' (F1: 94.64%)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Serialized Model Bundle Exists",
+      "status": "PASS",
+      "details": "Path: C:\\Users\\venga\\OneDrive\\Documents\\project\\models\\trained_model.pkl (454,740 bytes)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Model Comparison JSON Report Exists",
+      "status": "PASS",
+      "details": "Path: C:\\Users\\venga\\OneDrive\\Documents\\project\\data\\model_comparison.json",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Comparison JSON Schema & Completeness",
+      "status": "PASS",
+      "details": "Valid multi-model evaluation schema",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "GesturePredictor Loaded",
+      "status": "PASS",
+      "details": "Active classifier: 'SVM_RBF'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "14 Target Classes Loaded",
+      "status": "PASS",
+      "details": "Classes: 14",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Single Vector Prediction & Confidence",
+      "status": "PASS",
+      "details": "Predicted: 'OPEN_PALM' (Conf: 48.9%) | Expected: 'OPEN_PALM'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Top-K Candidate Ranking (Descending Conf)",
+      "status": "PASS",
+      "details": "Top-3: ['OPEN_PALM:0.49', 'SWIPE_UP:0.48', 'FOUR_FINGERS:0.01']",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "predict_from_landmarks() Integration",
+      "status": "PASS",
+      "details": "Predicted: 'OPEN_PALM' (Conf: 48.9%)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "None Input Immunity",
+      "status": "PASS",
+      "details": "Safely returns ('NONE', 0.0)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Empty Array Immunity",
+      "status": "PASS",
+      "details": "Safely returns ('NONE', 0.0)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Feature Dimension Mismatch Guard",
+      "status": "PASS",
+      "details": "Rejects wrong shape without crash",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "NaN / Inf Feature Vector Immunity",
+      "status": "PASS",
+      "details": "Safely rejected",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Runtime Inference Latency (< 5.0 ms)",
+      "status": "PASS",
+      "details": "Mean: 0.531 ms | Throughput: 1,883 predictions/sec",
+      "latency_ms": 0.0
+    }
+  ]
+}

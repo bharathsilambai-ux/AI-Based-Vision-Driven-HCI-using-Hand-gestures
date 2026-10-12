@@ -1,0 +1,612 @@
+<USER_REQUEST>
+I am developing a final-year AIML project based on the research paper titled “A Vision-Based Real-Time Hand Gesture Controlled System for Human Computer Interaction.”
+
+PROJECT TITLE:
+“AI-Based Vision-Driven Human Computer Interaction Using Advanced Hand Gesture Recognition”
+
+PROJECT OBJECTIVE:
+Develop a robust, accurate, real-time, software-based Human Computer Interaction system that allows users to control a computer using hand gestures captured through a normal webcam. The project must go beyond simply reproducing the reference paper by adding improved gesture recognition, stability, confidence-based decision making, expanded computer operations, application-specific controls, multimodal interaction, and proper performance evaluation.
+
+IMPORTANT:
+Use the reference paper only as the baseline architecture and research foundation. Do NOT copy its implementation, wording, results, claimed accuracy, or exact experimental results. Clearly identify and implement meaningful improvements.
+
+TECHNOLOGY STACK:
+
+* Python
+* OpenCV
+* MediaPipe Hand Landmarker
+* NumPy
+* Scikit-learn and/or PyTorch
+* PyAutoGUI
+* Windows system-control APIs where required
+* Speech-to-text library/API
+* Matplotlib/Seaborn only for offline evaluation graphs if required
+
+CORE PIPELINE:
+Webcam
+→ OpenCV Frame Capture
+→ Image Preprocessing
+→ MediaPipe Hand Landmark Detection
+→ 21 Hand Landmark Extraction
+→ Feature Normalization
+→ Gesture Classification
+→ Confidence Evaluation
+→ Temporal Stabilization
+→ Gesture Validation
+→ Mode Controller
+→ Command Interpreter
+→ System/Application Controller
+→ Real-Time Output Dashboard
+
+MODULE 1 — HAND DETECTION:
+Use MediaPipe to detect the hand and extract 21 landmarks in real time.
+
+Requirements:
+
+* Detect one hand reliably.
+* Support optional two-hand detection if required.
+* Display landmark connections.
+* Handle hand movement and rotation.
+* Normalize landmark coordinates so recognition is less dependent on hand position and distance from the camera.
+
+MODULE 2 — DATASET CREATION:
+Create a custom landmark-based gesture dataset.
+
+Include gestures such as:
+
+* Open Palm
+* Fist
+* Thumbs Up
+* Thumbs Down
+* Point
+* Peace
+* OK
+* Pinch
+* Three Fingers
+* Four Fingers
+* Swipe Left
+* Swipe Right
+* Swipe Up
+* Swipe Down
+
+Store normalized landmark coordinates and corresponding gesture labels.
+
+Do not depend only on hard-coded finger-count rules. Use the landmark features for machine-learning-based classification wherever appropriate.
+
+MODULE 3 — MACHINE LEARNING CLASSIFIER:
+Train and compare suitable classifiers such as:
+
+* Random Forest
+* SVM
+* MLP Neural Network
+
+Select the model based on measured validation performance rather than claiming that one model is automatically best.
+
+Evaluate:
+
+* Accuracy
+* Precision
+* Recall
+* F1-score
+* Confusion matrix
+* Inference time
+
+Save the trained model and load it during real-time execution.
+
+MODULE 4 — CONFIDENCE-BASED RECOGNITION:
+Every prediction must include a confidence score.
+
+Example:
+Gesture: PEACE
+Confidence: 96.8%
+
+Do not execute a command when confidence is below a configurable threshold.
+
+Make the threshold configurable, for example:
+CONFIDENCE_THRESHOLD = 0.85
+
+The threshold must be experimentally tuned rather than blindly assuming 85% is optimal.
+
+MODULE 5 — TEMPORAL STABILIZATION:
+Prevent accidental commands caused by single-frame misclassification.
+
+Use a sequence of recent predictions.
+
+Example:
+Frame 1 → Peace
+Frame 2 → Peace
+Frame 3 → Peace
+Frame 4 → Peace
+Frame 5 → Peace
+
+Only after sufficient stable predictions should the system execute the command.
+
+Implement:
+
+* Prediction history
+* Majority voting or equivalent temporal smoothing
+* Minimum stable-frame requirement
+* Gesture transition handling
+
+MODULE 6 — COMMAND COOLDOWN:
+Prevent repeated execution of the same command.
+
+Example:
+One “Thumbs Up” gesture should not continuously trigger multiple commands.
+
+Implement:
+
+* Command cooldown
+* Last-command tracking
+* Configurable cooldown duration
+
+MODULE 7 — MULTI-MODE CONTROL:
+
+Create separate operating modes:
+
+1. MOUSE MODE
+2. SYSTEM CONTROL MODE
+3. MEDIA CONTROL MODE
+4. BROWSER MODE
+5. PRESENTATION MODE
+6. APPLICATION CONTROL MODE
+7. CUSTOM GESTURE MODE
+
+The system must clearly display the current mode.
+
+Example:
+
+MODE: MOUSE
+GESTURE: PINCH
+ACTION: LEFT CLICK
+CONFIDENCE: 97.2%
+
+MODULE 8 — ADVANCED VIRTUAL MOUSE:
+
+Implement:
+
+* Cursor movement using index-finger position
+* Left click
+* Right click
+* Double click
+* Drag and drop
+* Scroll up
+* Scroll down
+* Click-and-hold
+* Optional zoom control
+
+Cursor movement should include smoothing to reduce jitter.
+
+Implement adaptive or configurable sensitivity.
+
+MODULE 9 — SYSTEM CONTROL:
+
+Provide gesture-based control for:
+
+* Volume increase
+* Volume decrease
+* Mute/unmute
+* Brightness increase
+* Brightness decrease
+* Screenshot
+* Open File Explorer
+* Open browser
+* Lock screen where safely supported
+* Application launch
+* Cancel/exit operation
+
+Every action must have a unique, stable gesture mapping.
+
+MODULE 10 — MEDIA CONTROL:
+
+Implement:
+
+* Play
+* Pause
+* Next track/video
+* Previous track/video
+* Volume +
+* Volume -
+* Mute
+
+Support commonly used media applications where technically feasible.
+
+MODULE 11 — BROWSER CONTROL:
+
+Implement:
+
+* Scroll up
+* Scroll down
+* Back
+* Forward
+* Zoom in
+* Zoom out
+* Refresh
+* Tab switching where reliably supported
+
+Avoid assigning the same gesture to conflicting commands within the same mode.
+
+MODULE 12 — PRESENTATION CONTROL:
+
+For PowerPoint or equivalent presentation software implement:
+
+* Next slide
+* Previous slide
+* Start presentation
+* Exit presentation
+* Pointer/attention mode where feasible
+* Scroll/navigation where applicable
+
+Use a dedicated PRESENTATION MODE so gestures do not conflict with normal mouse/system operations.
+
+MODULE 13 — APPLICATION-SPECIFIC CONTROL:
+
+Implement context-aware control.
+
+When the active application is supported, change the meaning of selected gestures according to that application.
+
+Examples:
+
+YouTube/Media:
+Pinch → Play/Pause
+Swipe Right → Next
+Swipe Left → Previous
+
+Browser:
+Swipe Left → Back
+Swipe Right → Forward
+Two-finger movement → Scroll
+
+PowerPoint:
+Swipe Right → Next Slide
+Swipe Left → Previous Slide
+
+The system should clearly show:
+ACTIVE APPLICATION
+CURRENT MODE
+RECOGNIZED GESTURE
+EXECUTED COMMAND
+
+MODULE 14 — CUSTOM GESTURE MAPPING:
+
+Allow the user to configure gesture-to-command mappings.
+
+Example:
+
+Gesture:
+Peace
+
+Assigned Action:
+Open Browser
+
+The configuration should be stored so that it can be reused after restarting the application.
+
+Do not hard-code every command permanently.
+
+MODULE 15 — VOICE + GESTURE MULTIMODAL CONTROL:
+
+Add optional speech-to-text functionality.
+
+Examples:
+
+Voice:
+“Open Chrome”
+
+Gesture:
+Confirm gesture
+
+→ Execute command.
+
+The system should distinguish:
+
+* Gesture command
+* Voice command
+* Combined command
+
+Display the detected voice command in the dashboard.
+
+MODULE 16 — ROBUSTNESS IMPROVEMENT:
+
+Improve recognition under different conditions:
+
+Lighting:
+
+* Bright
+* Normal
+* Low light
+
+Background:
+
+* Plain
+* Complex
+
+Hand position:
+
+* Center
+* Left
+* Right
+* Different distances
+
+Hand orientation:
+
+* Front
+* Tilted
+* Rotated
+
+The system should not falsely claim perfect recognition. Measure the actual performance experimentally.
+
+MODULE 17 — ERROR HANDLING:
+
+The application must safely handle:
+
+* No hand detected
+* Multiple hands detected
+* Low-confidence prediction
+* Unknown gesture
+* Camera failure
+* Unsupported application
+* Invalid command
+* Gesture transition
+* Temporary tracking loss
+
+Show meaningful status messages instead of crashing.
+
+Example:
+
+NO HAND DETECTED
+
+or
+
+LOW CONFIDENCE — COMMAND IGNORED
+
+MODULE 18 — REAL-TIME DASHBOARD:
+
+Create a professional real-time interface displaying:
+
+---
+
+## AI HAND GESTURE CONTROL SYSTEM
+
+Camera Status: ACTIVE
+Current Mode: MOUSE
+Detected Gesture: PINCH
+Confidence: 97.4%
+Action: LEFT CLICK
+FPS: 29
+Latency: 118 ms
+Hand Status: DETECTED
+System Status: READY
+
+---
+
+Also display:
+
+* Hand landmarks
+* Gesture label
+* Confidence percentage
+* Current mode
+* Executed command
+* FPS
+* Approximate latency
+* Warning/error messages
+
+MODULE 19 — PERFORMANCE MONITORING:
+
+Measure:
+
+* Gesture recognition accuracy
+* Precision
+* Recall
+* F1-score
+* Confusion matrix
+* FPS
+* Average command latency
+* CPU usage
+* Memory usage
+* False activation rate
+* Missed command rate
+
+Do not use fabricated values.
+
+All reported results must come from actual experiments performed on the developed system.
+
+MODULE 20 — COMPARATIVE EVALUATION:
+
+Compare the baseline/reference approach and the developed system using measurable criteria such as:
+
+* Number of supported gestures
+* Supported computer operations
+* Recognition stability
+* False activation handling
+* Application control
+* Customization
+* Multimodal interaction
+* Robustness testing
+* Latency
+* Accuracy
+
+Do not create an artificial “winner” without experimental evidence.
+
+MODULE 21 — SECURITY AND SAFETY:
+
+Prevent accidental critical actions.
+
+For potentially disruptive operations:
+
+* Require confirmation gesture
+* Use a cancellation gesture
+* Use confidence threshold
+* Use cooldown
+* Never execute unknown commands
+
+MODULE 22 — PROJECT SOFTWARE ARCHITECTURE:
+
+Organize the project professionally.
+
+Suggested structure:
+
+project/
+│
+├── main.py
+├── config.py
+│
+├── camera/
+│   └── camera_manager.py
+│
+├── detection/
+│   └── hand_detector.py
+│
+├── features/
+│   └── landmark_processor.py
+│
+├── models/
+│   ├── train_model.py
+│   ├── predict.py
+│   └── trained_model.pkl
+│
+├── gestures/
+│   ├── static_gestures.py
+│   ├── dynamic_gestures.py
+│   └── gesture_mapping.py
+│
+├── controllers/
+│   ├── mouse_controller.py
+│   ├── system_controller.py
+│   ├── media_controller.py
+│   ├── browser_controller.py
+│   └── presentation_controller.py
+│
+├── voice/
+│   └── speech_controller.py
+│
+├── ui/
+│   └── dashboard.py
+│
+├── evaluation/
+│   ├── evaluate_model.py
+│   └── generate_metrics.py
+│
+├── dataset/
+│
+└── requirements.txt
+
+DEVELOPMENT ORDER:
+
+Phase 1:
+Set up Python environment and dependencies.
+
+Phase 2:
+Implement webcam + OpenCV.
+
+Phase 3:
+Implement MediaPipe hand detection.
+
+Phase 4:
+Extract and normalize 21 landmarks.
+
+Phase 5:
+Create custom gesture dataset.
+
+Phase 6:
+Train and evaluate ML classifiers.
+
+Phase 7:
+Integrate the selected classifier into real-time recognition.
+
+Phase 8:
+Implement confidence filtering, temporal stabilization and cooldown.
+
+Phase 9:
+Implement virtual mouse.
+
+Phase 10:
+Implement system controls.
+
+Phase 11:
+Implement media controls.
+
+Phase 12:
+Implement browser controls.
+
+Phase 13:
+Implement presentation/application controls.
+
+Phase 14:
+Implement custom gesture mapping.
+
+Phase 15:
+Implement optional voice interaction.
+
+Phase 16:
+Develop professional dashboard.
+
+Phase 17:
+Conduct robustness testing.
+
+Phase 18:
+Calculate actual performance metrics.
+
+Phase 19:
+Optimize latency and recognition stability.
+
+Phase 20:
+Prepare final documentation, diagrams, screenshots, test cases, results and presentation.
+
+IMPORTANT DEVELOPMENT RULES:
+
+1. Do not claim 100% accuracy without experimental evidence.
+2. Do not copy the reference paper's results.
+3. Do not use arbitrary hard-coded thresholds without explaining and testing them.
+4. Avoid gesture conflicts.
+5. Prioritize stable recognition over simply increasing the number of gestures.
+6. Every command must have a clear gesture, confidence condition and cooldown.
+7. Keep the system modular so new gestures and commands can be added easily.
+8. Provide clear real-time visual feedback.
+9. Log recognized gestures, confidence, commands and errors for evaluation.
+10. Optimize for real-time webcam performance on a normal consumer laptop.
+11. If a proposed feature is unreliable on the target operating system, clearly state the limitation and implement the most reliable alternative.
+12. Build and test incrementally; do not generate a huge untested codebase at once.
+
+FINAL EXPECTED OUTPUT:
+
+The completed project should provide a reliable AI-based touch-free Human Computer Interaction system capable of controlling the computer through hand gestures, with:
+
+* Real-time hand tracking
+* ML-based gesture recognition
+* Expanded gesture vocabulary
+* Virtual mouse
+* Scrolling
+* Clicking
+* Drag and drop
+* Volume control
+* Brightness control
+* Media control
+* Browser control
+* Presentation control
+* Application-specific control
+* Custom gesture mapping
+* Confidence filtering
+* Temporal stabilization
+* Command cooldown
+* Optional voice interaction
+* Professional real-time dashboard
+* Performance evaluation
+* Robustness testing
+
+The final implementation must be practical, modular, measurable, demonstrable and clearly distinguishable from the reference paper through the added improvements. initially phase 1 test 
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-03T10:55:41+05:30.
+
+The user's current state is as follows:
+Other open documents:
+- c:\Users\venga\OneDrive\Documents\project\README.md (LANGUAGE_MARKDOWN)
+- c:\Users\venga\OneDrive\Documents\project\gui\gesture_manager.py (LANGUAGE_PYTHON)
+- c:\Users\venga\OneDrive\Documents\project\gui\calibration.py (LANGUAGE_PYTHON)
+- c:\Users\venga\OneDrive\Documents\project\control\keyboard_controller.py (LANGUAGE_PYTHON)
+- c:\Users\venga\OneDrive\Documents\project\.vscode\settings.json (LANGUAGE_JSON)
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from None to Gemini 3.8 Flash (High). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>

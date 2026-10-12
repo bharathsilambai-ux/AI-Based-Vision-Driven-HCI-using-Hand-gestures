@@ -1,0 +1,112 @@
+{
+  "phase": 14,
+  "name": "Custom Gesture-to-Command Mapping System",
+  "timestamp": "2026-10-03 15:54:11",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "summary": {
+    "total_tests": 16,
+    "passed": 16,
+    "failed": 0,
+    "pass_rate_pct": 100.0,
+    "mean_dispatch_latency_ms": 0.00166,
+    "throughput_ops_sec": 601945.5
+  },
+  "results": [
+    {
+      "test": "Custom Mapping Package Exports",
+      "status": "PASS",
+      "details": "All classes exported from gestures package",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "CustomAction Serialization Roundtrip",
+      "status": "PASS",
+      "details": "Action: COPY_TEXT (hotkey)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "CustomActionExecutor Execution Types",
+      "status": "PASS",
+      "details": "Hotkey, KeyPress, Text, Shell, and Callback tested",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Security Blacklist Defense",
+      "status": "PASS",
+      "details": "Blocked 4/4 dangerous shell commands",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Executor Telemetry & History",
+      "status": "PASS",
+      "details": "Recorded 9 execution logs with latencies",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Dynamic Custom Action Binding",
+      "status": "PASS",
+      "details": "Bound PEACE -> MUTE_ALL and THUMBS_UP -> LAUNCH_TERMINAL",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Direct Bound Gesture Execution",
+      "status": "PASS",
+      "details": "Successfully resolved and executed bound custom action",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Gesture Unbinding & Mode Fallback",
+      "status": "PASS",
+      "details": "Unbound PEACE in CUSTOM -> Fallback to MOUSE 'RIGHT_CLICK'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Duplicate Action Conflict Detection",
+      "status": "PASS",
+      "details": "Detected conflict: Multiple gestures ['FIST', 'OK'] map to identical action 'TEST_DUPLICATE_ACT'.",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Gesture Repertoire Coverage Report",
+      "status": "PASS",
+      "details": "Mode: PRESENTATION | Coverage: 52.9% (9/17)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Profile JSON Schema Validation",
+      "status": "PASS",
+      "details": "Valid passed, malformed caught 2 error(s)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Atomic Persistence & Backup Roundtrip",
+      "status": "PASS",
+      "details": "Atomic .tmp replace verified, .bak backup confirmed",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Profile Export & Import Roundtrip",
+      "status": "PASS",
+      "details": "Exported & restored profile 'Default Profile'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Profile Reset to Defaults",
+      "status": "PASS",
+      "details": "Cleared custom actions and restored canonical mappings",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "E2E Classifier -> Custom Action Execution",
+      "status": "PASS",
+      "details": "Gesture 'PEACE' recognized -> 'E2E_PLUGIN_ACTION' executed successfully",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Custom Action Dispatch Benchmark",
+      "status": "PASS",
+      "details": "Mean latency: 0.0017 ms | Throughput: 601,945 ops/sec",
+      "latency_ms": 0.002
+    }
+  ]
+}

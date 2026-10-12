@@ -1,0 +1,133 @@
+{
+  "phase": "Phase 9 - Virtual Mouse Controller & Jitter Filtering",
+  "timestamp": "2026-10-03 15:39:28",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "total_tests": 20,
+  "passed": 20,
+  "failed": 0,
+  "pass_rate_pct": 100.0,
+  "mean_cursor_latency_ms": 0.005682499962858856,
+  "cursor_move_throughput": 175978.88368430393,
+  "results": [
+    {
+      "test": "Controllers Package Exports",
+      "status": "PASS",
+      "details": "VirtualMouseController and OneEuroFilter accessible",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Virtual Mouse Initialization",
+      "status": "PASS",
+      "details": "Screen: 1920x1080 | Mock Mode: True",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Active Box Top-Left Mapping",
+      "status": "PASS",
+      "details": "(0.10, 0.10) -> (0, 0) [Expected: (0, 0)]",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Active Box Bottom-Right Mapping",
+      "status": "PASS",
+      "details": "(0.90, 0.80) -> (1919, 1079) [Expected: (1919, 1079)]",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Active Box Center Mapping",
+      "status": "PASS",
+      "details": "(0.50, 0.45) -> (960, 539) [Expected: (960, 540)]",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Workspace Clamping Guard",
+      "status": "PASS",
+      "details": "Min: (0, 0), Max: (1919, 1079)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "1-Euro Low-Speed Jitter Attenuation",
+      "status": "PASS",
+      "details": "Raw Var: 4.00 -> Filtered Var: 0.03 (99.3% reduction)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "1-Euro High-Speed Responsiveness",
+      "status": "PASS",
+      "details": "Fast Target: 1200.0 -> Followed to: 1161.8",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Deadzone Micro-Tremor Suppression",
+      "status": "PASS",
+      "details": "Initial: (960, 539), Micro-move: (960, 539) (Suppressed: True)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Configurable Sensitivity Scaling",
+      "status": "PASS",
+      "details": "Low (1.0x): 49px traversal, High (2.5x): 278px traversal",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Left Click Dispatch",
+      "status": "PASS",
+      "details": "Action: 'LEFT_CLICK'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Right Click Dispatch",
+      "status": "PASS",
+      "details": "Action: 'RIGHT_CLICK'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Double Click Dispatch",
+      "status": "PASS",
+      "details": "Action: 'DOUBLE_CLICK'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Drag and Drop State Lifecycle",
+      "status": "PASS",
+      "details": "Started: True -> Stopped: False",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Click-and-Hold / Release Lifecycle",
+      "status": "PASS",
+      "details": "Held: True -> Released: True",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Vertical Scrolling Up & Down",
+      "status": "PASS",
+      "details": "Up: 'True', Down: 'True'",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Zoom In / Zoom Out Control",
+      "status": "PASS",
+      "details": "Zoom In: True, Zoom Out: True",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Unified Action Router (execute_action)",
+      "status": "PASS",
+      "details": "CURSOR_MOVE, LEFT_CLICK, DRAG_DROP, SCROLL_UP, RELEASE dispatched",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Clean State Recovery on Reset",
+      "status": "PASS",
+      "details": "Released active drag and flushed coordinates",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Cursor Movement Latency (< 0.10 ms)",
+      "status": "PASS",
+      "details": "Mean: 5.7 microseconds (0.0057 ms) | 175,979 moves/sec",
+      "latency_ms": 0.0
+    }
+  ]
+}

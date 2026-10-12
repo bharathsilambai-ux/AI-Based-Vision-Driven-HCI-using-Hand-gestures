@@ -1,0 +1,169 @@
+{
+  "phase": "Phase 5 - Custom Landmark-Based Hand Gesture Dataset",
+  "timestamp": "2026-10-03 11:59:42",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "total_tests": 26,
+  "passed": 26,
+  "failed": 0,
+  "pass_rate_pct": 100.0,
+  "samples_generated": 1400,
+  "classes_count": 14,
+  "results": [
+    {
+      "test": "14 Canonical Gesture Classes Present",
+      "status": "PASS",
+      "details": "Classes count: 14",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Label-to-ID Bi-directional Mapping",
+      "status": "PASS",
+      "details": "14/14 bijective mappings verified",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Gesture Synonym & Alias Canonicalization",
+      "status": "PASS",
+      "details": "Synonyms correctly normalized",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Gaussian Coordinate Jitter Noise",
+      "status": "PASS",
+      "details": "Wrist fixed at origin, coordinates perturbed",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "3D Random Euler Rotation (Preserves Dist)",
+      "status": "PASS",
+      "details": "Span after rotation: 1.0000",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Distance / Scale Perturbation",
+      "status": "PASS",
+      "details": "Span after scale: 0.8712",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Horizontal Hand Mirroring (X Inversion)",
+      "status": "PASS",
+      "details": "Original X: 0.25 -> Mirrored X: -0.25",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Composite Stochastic Augmentation",
+      "status": "PASS",
+      "details": "Clean augmented array",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Benchmark Generation (1400 Samples)",
+      "status": "PASS",
+      "details": "Generated 1400 samples in 0.69s (2,027 samples/s)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Feature Matrix Shape (N, 92)",
+      "status": "PASS",
+      "details": "Shape: (1400, 92), Dtype: float32",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Zero NaN / Inf In Feature Matrix",
+      "status": "PASS",
+      "details": "Strict numeric integrity verified",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Landmark Coordinates Matrix (N, 21, 3)",
+      "status": "PASS",
+      "details": "Shape: (1400, 21, 3)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Kinematic Velocities Matrix (N, 4)",
+      "status": "PASS",
+      "details": "Shape: (1400, 4)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "100% Balanced Class Distribution",
+      "status": "PASS",
+      "details": "Exactly 100 samples across all 14 classes",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Class ID Encoding Range [0..13]",
+      "status": "PASS",
+      "details": "Unique encoded IDs: 14",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Compressed NPZ File Exists",
+      "status": "PASS",
+      "details": "File size: 336,157 bytes",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "CSV Inspection File Exists",
+      "status": "PASS",
+      "details": "File size: 533,066 bytes",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "NPZ Round-Trip Deserialization",
+      "status": "PASS",
+      "details": "Byte-level match with in-memory dataset",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "CSV Row Integrity (1 Header + 1400 Samples)",
+      "status": "PASS",
+      "details": "Total CSV rows: 1401",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Dataset Partition Sum (980 + 140 + 280 = 1400)",
+      "status": "PASS",
+      "details": "Train: 980 | Val: 140 | Test: 280",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Stratified Class Representation",
+      "status": "PASS",
+      "details": "All 14 classes represented across Train, Val, Test",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Dataset Validation Suite",
+      "status": "PASS",
+      "details": "Issues found: 0",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Summary JSON Metadata Exists",
+      "status": "PASS",
+      "details": "Path: C:\\Users\\venga\\OneDrive\\Documents\\project\\dataset\\dataset_summary.json",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Summary JSON Schema Integrity",
+      "status": "PASS",
+      "details": "Valid JSON structure",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Live Collector Session Start",
+      "status": "PASS",
+      "details": "Session active for OPEN_PALM",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Live Session Auto-Stop at Target",
+      "status": "PASS",
+      "details": "Target 10 samples reached, session closed",
+      "latency_ms": 0.0
+    }
+  ]
+}

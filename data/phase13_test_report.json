@@ -1,0 +1,154 @@
+{
+  "phase": 13,
+  "name": "Presentation & Application-Specific Controls",
+  "timestamp": "2026-10-03 15:51:31",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "summary": {
+    "total_tests": 23,
+    "passed": 23,
+    "failed": 0,
+    "pass_rate_pct": 100.0,
+    "mean_dispatch_latency_ms": 0.00075,
+    "throughput_ops_sec": 1339800.1
+  },
+  "results": [
+    {
+      "test": "PresentationController Package Exports",
+      "status": "PASS",
+      "details": "PresentationController and PresentationTarget exported",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Presentation Controller Initialization",
+      "status": "PASS",
+      "details": "Mode: Mock | App: powerpoint | Slide: 1/50",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Next Slide Advancement",
+      "status": "PASS",
+      "details": "Slide index advanced: 1 -> 3",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Previous Slide Navigation",
+      "status": "PASS",
+      "details": "Slide index reverted: 3 -> 2",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Lower Bound Slide Clamping",
+      "status": "PASS",
+      "details": "Slide stays at minimum 1 (index=1)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Upper Bound Slide Clamping",
+      "status": "PASS",
+      "details": "Slide clamped at total 50 (index=50)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "First & Last Slide Jumping",
+      "status": "PASS",
+      "details": "First: 1, Last: 50",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Direct Slide Number Jump",
+      "status": "PASS",
+      "details": "Directly jumped to slide 18",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Start Presentation (Beginning)",
+      "status": "PASS",
+      "details": "Presenting: True | Slide: 1",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Slideshow Active Advancement",
+      "status": "PASS",
+      "details": "Active slide: 3",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Exit Presentation Mode",
+      "status": "PASS",
+      "details": "Presenting: False",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Laser Pointer Toggle Mode",
+      "status": "PASS",
+      "details": "Laser On: True -> Laser Off: True",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Pen Annotation Tool Toggle",
+      "status": "PASS",
+      "details": "Action: TOGGLE_PEN",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Clear Annotations ('E')",
+      "status": "PASS",
+      "details": "Action: CLEAR_ANNOTATIONS",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Black Screen Blanking Toggle",
+      "status": "PASS",
+      "details": "Mode: NONE -> True -> NONE",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "White Screen Blanking Toggle",
+      "status": "PASS",
+      "details": "Mode: NONE -> True -> NONE",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Slide Overview Grid Sorter",
+      "status": "PASS",
+      "details": "Action: SLIDE_OVERVIEW",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Presentation Target Profiles",
+      "status": "PASS",
+      "details": "Configured profiles: powerpoint, slides, keynote, pdf, generic",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Presenter Telemetry Introspection",
+      "status": "PASS",
+      "details": "Logged 25 presenter events",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Unified Action Router Dispatch",
+      "status": "PASS",
+      "details": "Tested 12 canonical commands",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "E2E Static Gesture -> Slide Overview Execution",
+      "status": "PASS",
+      "details": "Gesture: 'PEACE' -> Action: 'SLIDE_OVERVIEW' (Executed: True)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Dynamic Presentation Gesture Mappings",
+      "status": "PASS",
+      "details": "SWIPE_RIGHT->NEXT_SLIDE, SWIPE_LEFT->PREV_SLIDE, THUMBS_UP->START_PRESENTATION",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Presenter Command Dispatch Benchmark",
+      "status": "PASS",
+      "details": "Mean latency: 0.0007 ms | Throughput: 1,339,800 ops/sec",
+      "latency_ms": 0.001
+    }
+  ]
+}

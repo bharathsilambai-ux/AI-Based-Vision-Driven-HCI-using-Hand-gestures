@@ -19,8 +19,11 @@ screenshots/*.png
 .pytest_cache/
 .coverage
 htmlcov/
+dataset_test/
+*.log
 
 # OS specific files
 .DS_Store
 Thumbs.db
 desktop.ini
+

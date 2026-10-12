@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "name": "Default Profile",
+    "version": "1.0",
+    "author": "System",
+    "description": "Default HCI gesture mapping profile",
+    "created_at": "2026-10-03 16:23:16",
+    "updated_at": "2026-10-03 16:23:16"
+  },
+  "custom_actions": {},
+  "mappings": {
+    "MOUSE": {
+      "POINT": "CURSOR_MOVE",
+      "PINCH": "LEFT_CLICK",
+      "PEACE": "RIGHT_CLICK",
+      "THREE_FINGERS": "DRAG_DROP",
+      "FOUR_FINGERS": "DOUBLE_CLICK",
+      "SWIPE_UP": "SCROLL_UP",
+      "SWIPE_DOWN": "SCROLL_DOWN",
+      "OPEN_PALM": "HOVER",
+      "FIST": "RELEASE",
+      "THUMBS_UP": "ZOOM_IN",
+      "THUMBS_DOWN": "ZOOM_OUT",
+      "OK": "MIDDLE_CLICK"
+    },
+    "SYSTEM": {
+      "THUMBS_UP": "VOLUME_UP",
+      "THUMBS_DOWN": "VOLUME_DOWN",
+      "FIST": "MUTE",
+      "PEACE": "BRIGHTNESS_UP",
+      "THREE_FINGERS": "BRIGHTNESS_DOWN",
+      "OK": "SCREENSHOT",
+      "FOUR_FINGERS": "OPEN_FILE_EXPLORER",
+      "POINT": "OPEN_BROWSER",
+      "OPEN_PALM": "LOCK_SCREEN",
+      "SWIPE_LEFT": "TASK_SWITCH_PREV",
+      "SWIPE_RIGHT": "TASK_SWITCH_NEXT",
+      "SWIPE_UP": "TASK_VIEW",
+      "SWIPE_DOWN": "MINIMIZE_ALL"
+    },
+    "MEDIA": {
+      "PINCH": "PLAY_PAUSE",
+      "SWIPE_RIGHT": "NEXT_TRACK",
+      "SWIPE_LEFT": "PREV_TRACK",
+      "THUMBS_UP": "VOLUME_UP",
+      "THUMBS_DOWN": "VOLUME_DOWN",
+      "FIST": "MUTE",
+      "OPEN_PALM": "STOP",
+      "PEACE": "FAST_FORWARD",
+      "THREE_FINGERS": "REWIND",
+      "FOUR_FINGERS": "FULLSCREEN_TOGGLE"
+    },
+    "BROWSER": {
+      "SWIPE_LEFT": "HISTORY_BACK",
+      "SWIPE_RIGHT": "HISTORY_FORWARD",
+      "SWIPE_UP": "SCROLL_UP",
+      "SWIPE_DOWN": "SCROLL_DOWN",
+      "OK": "REFRESH_PAGE",
+      "PEACE": "NEW_TAB",
+      "FIST": "CLOSE_TAB",
+      "POINT": "LINK_CLICK",
+      "THUMBS_UP": "ZOOM_IN",
+      "THUMBS_DOWN": "ZOOM_OUT",
+      "PINCH": "TAB_SWITCH_NEXT",
+      "FOUR_FINGERS": "TAB_SWITCH_PREV"
+    },
+    "PRESENTATION": {
+      "SWIPE_RIGHT": "NEXT_SLIDE",
+      "SWIPE_LEFT": "PREV_SLIDE",
+      "THUMBS_UP": "START_PRESENTATION",
+      "THUMBS_DOWN": "EXIT_PRESENTATION",
+      "POINT": "LASER_POINTER",
+      "PINCH": "BLACK_SCREEN",
+      "OPEN_PALM": "WHITE_SCREEN",
+      "PEACE": "SLIDE_OVERVIEW",
+      "FIST": "CLEAR_ANNOTATIONS"
+    },
+    "CUSTOM": {
+      "PEACE": "OPEN_BROWSER",
+      "THUMBS_UP": "VOLUME_UP",
+      "THUMBS_DOWN": "VOLUME_DOWN",
+      "OK": "SCREENSHOT",
+      "FIST": "LOCK_SCREEN",
+      "OPEN_PALM": "SHOW_DESKTOP"
+    }
+  }
+}

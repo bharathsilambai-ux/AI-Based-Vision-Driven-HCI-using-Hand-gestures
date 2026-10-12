@@ -1,0 +1,100 @@
+{
+  "phase": 15,
+  "name": "Voice + Gesture Multimodal Control Subsystem",
+  "timestamp": "2026-10-03 15:57:48",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "summary": {
+    "total_tests": 14,
+    "passed": 14,
+    "failed": 0,
+    "pass_rate_pct": 100.0,
+    "mean_dispatch_latency_ms": 0.01858,
+    "throughput_ops_sec": 53808.9
+  },
+  "results": [
+    {
+      "test": "Voice Package Exports",
+      "status": "PASS",
+      "details": "All speech, intent, and fusion classes exported",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "SpeechEngine Audio Simulation & TTS",
+      "status": "PASS",
+      "details": "Simulated: \"switch to presentation mode\" | TTS: True",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Intent Classification Accuracy",
+      "status": "PASS",
+      "details": "Passed 18/18 phrases (100.0%)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Multimodal Fusion Engine Initialization",
+      "status": "PASS",
+      "details": "Mode: MOUSE | Gate: IDLE",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Voice Mode Switch -> Presentation",
+      "status": "PASS",
+      "details": "Engine Mode: PRESENTATION | Recognizer Mode: PRESENTATION",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Voice Mode Switch -> System",
+      "status": "PASS",
+      "details": "Engine Mode: SYSTEM | Recognizer Mode: SYSTEM",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Confirmation Gate Engagement (Lock Screen)",
+      "status": "PASS",
+      "details": "Gate State: AWAITING_CONFIRMATION | Pending: LOCK_SCREEN",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Voice Confirmation Execution",
+      "status": "PASS",
+      "details": "Disposition: CONFIRMED_AND_EXECUTED_LOCK_SCREEN | Last Action: LOCK_SCREEN",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Voice Cancellation Safe Abort",
+      "status": "PASS",
+      "details": "Disposition: CANCELLED_LOCK_SCREEN",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Confirmation Gate Timeout Expiration",
+      "status": "PASS",
+      "details": "Auto-cleared expired critical action safely",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Compound Spatial Point + Voice Click",
+      "status": "PASS",
+      "details": "Disposition: COMPOUND_LEFT_CLICK_(520.0, 340.0) | Mouse Action: LEFT_CLICK",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Direct Controller Voice Dispatch",
+      "status": "PASS",
+      "details": "Dispatched VolumeUp, NextSlide, NextTrack, ScrollDown",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Spoken Dictation Typing Dispatch",
+      "status": "PASS",
+      "details": "Disposition: DICTATION_TYPED",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Multimodal Fusion Latency Benchmark",
+      "status": "PASS",
+      "details": "Mean latency: 0.0186 ms | Throughput: 53,809 ops/sec",
+      "latency_ms": 0.019
+    }
+  ]
+}

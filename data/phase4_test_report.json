@@ -1,0 +1,247 @@
+{
+  "phase": "Phase 4 - Landmark Processing, Normalization & High-Dimensional ML Features",
+  "timestamp": "2026-10-03 11:51:48",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "total_tests": 39,
+  "passed": 39,
+  "failed": 0,
+  "pass_rate_pct": 100.0,
+  "mean_latency_ms": 0.41901620000135154,
+  "throughput_fps": 2386.542572809296,
+  "results": [
+    {
+      "test": "Features Package Exports",
+      "status": "PASS",
+      "details": "LandmarkProcessor, FeatureExtractor accessible",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Vision FeatureExtractor Bridge",
+      "status": "PASS",
+      "details": "100% identical symbols re-exported",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Canonical Constants (14 Dist, 8 Angle)",
+      "status": "PASS",
+      "details": "14 pairs, 8 triplets defined",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Wrist Centered to Origin (0,0,0)",
+      "status": "PASS",
+      "details": "L0 = [0, 0, 0] at both positions",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Translation Invariance Across Frame",
+      "status": "PASS",
+      "details": "Max coordinate delta: 0.000000",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Unit Palm Span (||L9 - L0|| = 1.0000)",
+      "status": "PASS",
+      "details": "Spans: [1.0000, 1.0000, 1.0000]",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Scale Invariant Pairwise Distances",
+      "status": "PASS",
+      "details": "Max distance delta: 0.000000",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Palm Vector Vertical Alignment",
+      "status": "PASS",
+      "details": "L9 x-coords: [0.0000, 0.0000, 0.0000]",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Rotation-Invariant Feature Vector",
+      "status": "PASS",
+      "details": "Max diff between 0 and 45 deg: 0.000000",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Straight Ray Angle (180 deg / pi rad)",
+      "status": "PASS",
+      "details": "Angle: 3.1416 rad (180.0 deg)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Right Ray Angle (90 deg / pi/2 rad)",
+      "status": "PASS",
+      "details": "Angle: 1.5708 rad (90.0 deg)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Coincident Ray Angle (0 deg)",
+      "status": "PASS",
+      "details": "Angle: 0.0000 rad",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Zero-Magnitude Vector Guard",
+      "status": "PASS",
+      "details": "Safely returns 0.0 without ZeroDivisionError",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Canonical 8 Joint Angles Bounded [0, pi]",
+      "status": "PASS",
+      "details": "Values: [2.96, 3.01, 3.1, 3.1]...",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Extended 15 Finger Joint Angles",
+      "status": "PASS",
+      "details": "Total joints: 15",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "14 Canonical Distances Non-Negative",
+      "status": "PASS",
+      "details": "Count: 14 | Min: 0.166 | Max: 2.163",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Pinch Index Touch Detection",
+      "status": "PASS",
+      "details": "Distance: 0.000000",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Unit Palm Normal Vector (||n|| = 1.0)",
+      "status": "PASS",
+      "details": "Normal: [0.026, -0.058, 0.998]",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Palm Facing Camera Boolean",
+      "status": "PASS",
+      "details": "Result: False",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Euler Angles (Roll, Pitch, Yaw)",
+      "status": "PASS",
+      "details": "Roll: -156.0 deg | Pitch: -3.3 deg | Yaw: 1.5 deg",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Initial Frame Velocity (Zero)",
+      "status": "PASS",
+      "details": "Speed: 0.0 px/s",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Kinematic Linear Velocity & Speed",
+      "status": "PASS",
+      "details": "Speed: 987.8 px/s | Dir: 0.0 deg",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Kinematic Acceleration",
+      "status": "PASS",
+      "details": "Acceleration: 75231.5 px/s^2",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Velocity History Reset",
+      "status": "PASS",
+      "details": "History cleanly cleared",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Dual Hand Extraction (Wrist Dist)",
+      "status": "PASS",
+      "details": "Distance: 0.5000 | Center: 320.0 px",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Dual Hand Screen Plane Angle",
+      "status": "PASS",
+      "details": "Angle: 0.0 deg",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Temporal Delta Distance (Expansion)",
+      "status": "PASS",
+      "details": "Delta dist: +0.2000 (Zoom: 1.40x)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Two-Hand Symmetry Score",
+      "status": "PASS",
+      "details": "Symmetry: 1.00",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Canonical 92-D ML Feature Vector",
+      "status": "PASS",
+      "details": "Shape: (92,), Dtype: float32",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "No NaN / Inf in 92-D Vector",
+      "status": "PASS",
+      "details": "Clean floating point vector",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Rotation-Invariant 92-D ML Vector",
+      "status": "PASS",
+      "details": "Shape: (92,)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Extended 128-D Multi-Modal Vector",
+      "status": "PASS",
+      "details": "Shape: (128,)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Dual-Hand Interaction Vector (10-D)",
+      "status": "PASS",
+      "details": "Shape: (10,)",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "vision.hand_tracker.HandData Support",
+      "status": "PASS",
+      "details": "Processed successfully",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "detection.hand_detector.HandData Support",
+      "status": "PASS",
+      "details": "Processed successfully",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Raw NumPy Array (21, 3) Support",
+      "status": "PASS",
+      "details": "Processed successfully",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Raw Coordinate Tuple List Support",
+      "status": "PASS",
+      "details": "Processed successfully",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Single-Hand Processing Latency (< 0.5 ms)",
+      "status": "PASS",
+      "details": "Mean: 0.419 ms | Throughput: 2,387 hands/sec",
+      "latency_ms": 0.0
+    },
+    {
+      "test": "Dual-Hand Processing Latency (< 0.2 ms)",
+      "status": "PASS",
+      "details": "Mean: 0.009 ms | Throughput: 107,543 pairs/sec",
+      "latency_ms": 0.0
+    }
+  ]
+}

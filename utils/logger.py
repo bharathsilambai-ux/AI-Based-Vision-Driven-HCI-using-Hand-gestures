@@ -36,6 +36,10 @@ class SystemLogger:
     def info(self, msg: str):
         self.log("INFO", msg)
 
+    def debug(self, msg: str):
+        # Can be silent or low-priority log
+        pass
+
     def warning(self, msg: str):
         self.log("WARN", msg)
 

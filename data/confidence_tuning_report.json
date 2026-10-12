@@ -1,0 +1,69 @@
+{
+  "optimal_threshold": 0.75,
+  "rationale": "Empirically selected to maximize true-gesture activation while discarding low-confidence boundary classifications.",
+  "sweep_benchmarks": [
+    {
+      "threshold": 0.5,
+      "total_evaluated": 140,
+      "passed_activations": 128,
+      "activation_rate_pct": 91.43,
+      "mean_confidence": 0.8094
+    },
+    {
+      "threshold": 0.6,
+      "total_evaluated": 140,
+      "passed_activations": 118,
+      "activation_rate_pct": 84.29,
+      "mean_confidence": 0.8085
+    },
+    {
+      "threshold": 0.65,
+      "total_evaluated": 140,
+      "passed_activations": 115,
+      "activation_rate_pct": 82.14,
+      "mean_confidence": 0.8071
+    },
+    {
+      "threshold": 0.7,
+      "total_evaluated": 140,
+      "passed_activations": 112,
+      "activation_rate_pct": 80.0,
+      "mean_confidence": 0.808
+    },
+    {
+      "threshold": 0.75,
+      "total_evaluated": 140,
+      "passed_activations": 106,
+      "activation_rate_pct": 75.71,
+      "mean_confidence": 0.8078
+    },
+    {
+      "threshold": 0.8,
+      "total_evaluated": 140,
+      "passed_activations": 99,
+      "activation_rate_pct": 70.71,
+      "mean_confidence": 0.8071
+    },
+    {
+      "threshold": 0.85,
+      "total_evaluated": 140,
+      "passed_activations": 77,
+      "activation_rate_pct": 55.0,
+      "mean_confidence": 0.8086
+    },
+    {
+      "threshold": 0.9,
+      "total_evaluated": 140,
+      "passed_activations": 48,
+      "activation_rate_pct": 34.29,
+      "mean_confidence": 0.8071
+    },
+    {
+      "threshold": 0.95,
+      "total_evaluated": 140,
+      "passed_activations": 8,
+      "activation_rate_pct": 5.71,
+      "mean_confidence": 0.81
+    }
+  ]
+}
